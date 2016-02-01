@@ -1,0 +1,20 @@
+<!-- template that displays individual website entries -->
+<template name="website_item">
+<li>
+	<a href="{{pathFor route='website'}}">{{ title }}</a>
+	<p>
+		{{ description }}
+	</p>
+	<span>By {{ createBy }}</span>
+	{{#if vote }}
+		<span>Votes: {{ vote }}</span>
+	{{/if}}
+	<a href="#" class="btn btn-default js-upvote">
+		<span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>
+	</a>
+	<a href="#" class="btn btn-default js-downvote">
+		<span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span>
+	</a>
+	<!-- you will be putting your up and down vote buttons in here! -->
+</li>
+</template>

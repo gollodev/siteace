@@ -1,0 +1,22 @@
+<template name="website">
+  {{> navbar }}  
+	<div class="container">
+    <ol class="breadcrumb">
+      <li><a href="{{pathFor route='home'}}">Home</a></li>
+      <li class="active">{{ title }}</li>
+    </ol>
+    <div class="page-header">
+      <h1>{{ title }}</h1>
+      <span>By {{ createBy }}</span>
+      {{#if vote }}
+        <span> | Votes: {{ vote }}</span>
+      {{/if}}
+    </div>
+    <p>
+      {{ description }}
+    </p>
+    <div class="comment-section">
+      {{> commentsBox id=this._id}}
+    </div>
+	</div>
+</template>
